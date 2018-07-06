@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>心跳</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background: linear-gradient(to bottom,#ffa5a5 0%,#cccccc 100%);
+        }
+        .chest{
+            width: 500px;
+            height: 400px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .chest div{
+            animation: jump 1s infinite;
+        }
+        .left{
+            position: absolute;
+            left: 62px;
+            width: 220px;
+            height: 220px;
+            background: linear-gradient(90deg, #F50A45 0%, #d5093c 40%);
+            /*background: linear-gradient(90deg, #FFFFFF 0%, #000 40%);*/
+            border-radius:50%;
+            z-index: 1;
+        }
+        .center{
+            position: absolute;
+            bottom:100px;
+            left: 145px;
+            /*background: linear-gradient(-45deg, #FFFFFF 0%, #000 40%);*/
+            /*0度从下到上渐变，逆时针负角度开始渐变，顺时针正角度开始渐变*/
+            background: linear-gradient(-45deg, #B80734 0%, #d5093c 40%);
+            width: 210px;
+            height: 210px;
+            transform: rotate(45deg);
+        }
+        .right{
+            position: absolute;
+            right: 62px;
+            width: 220px;
+            height: 220px;
+            background: linear-gradient(90deg, #F50A45 0%, #d5093c 40%);
+            border-radius:50%;
+        }
+        @keyframes jump {
+            0%{
+                transform: scale(1) rotate(45deg);
+                box-shadow: 0 0 30px #d5093c;
+            }
+            50%{
+                transform: scale(1.1) rotate(45deg);
+                box-shadow: 0 0 60px #d5093c;
+            }
+            100%{
+                transform: scale(1) rotate(45deg);
+                box-shadow: 0 0 30px #d5093c;
+            }
+        }
+        .text{
+            text-align: center;
+            font: 500 20px/50px "宋体";
+        }
+    </style>
+</head>
+<body>
+    <div class="chest">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+    <div class="text">
+        <h2>The first page of the heart.</h2>
+    </div>
+    <audio src="images/心跳.mp3" autoplay loop></audio>
+</body>
+</html>
