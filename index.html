@@ -1,86 +1,513 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
+<!-- BEGIN HEAD -->
 <head>
-    <meta charset="UTF-8">
-    <title>心跳</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        html,body{
-            height: 100%;
-        }
-        body{
-            background: linear-gradient(to bottom,#ffa5a5 0%,#cccccc 100%);
-        }
-        .chest{
-            width: 500px;
-            height: 400px;
-            margin: 100px auto;
-            position: relative;
-        }
-        .chest div{
-            animation: jump 1s infinite;
-        }
-        .left{
-            position: absolute;
-            left: 62px;
-            width: 220px;
-            height: 220px;
-            background: linear-gradient(90deg, #F50A45 0%, #d5093c 40%);
-            /*background: linear-gradient(90deg, #FFFFFF 0%, #000 40%);*/
-            border-radius:50%;
-            z-index: 1;
-        }
-        .center{
-            position: absolute;
-            bottom:100px;
-            left: 145px;
-            /*background: linear-gradient(-45deg, #FFFFFF 0%, #000 40%);*/
-            /*0度从下到上渐变，逆时针负角度开始渐变，顺时针正角度开始渐变*/
-            background: linear-gradient(-45deg, #B80734 0%, #d5093c 40%);
-            width: 210px;
-            height: 210px;
-            transform: rotate(45deg);
-        }
-        .right{
-            position: absolute;
-            right: 62px;
-            width: 220px;
-            height: 220px;
-            background: linear-gradient(90deg, #F50A45 0%, #d5093c 40%);
-            border-radius:50%;
-        }
-        @keyframes jump {
-            0%{
-                transform: scale(1) rotate(45deg);
-                box-shadow: 0 0 30px #d5093c;
-            }
-            50%{
-                transform: scale(1.1) rotate(45deg);
-                box-shadow: 0 0 60px #d5093c;
-            }
-            100%{
-                transform: scale(1) rotate(45deg);
-                box-shadow: 0 0 30px #d5093c;
-            }
-        }
-        .text{
-            text-align: center;
-            font: 500 20px/50px "宋体";
-        }
-    </style>
+<meta charset="utf-8"/>
+<title>首页</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+
+<!-- GLOBAL MANDATORY STYLES -->
+<link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+<!-- PAGE LEVEL PLUGIN STYLES -->
+<link href="css/animate.css" rel="stylesheet">
+
+<!-- THEME STYLES -->
+<link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="favicon.ico"/>
 </head>
-<body>
-    <div class="chest">
-        <div class="left"></div>
-        <div class="center"></div>
-        <div class="right"></div>
-    </div>
-    <div class="text">
-        <h2>The first page of the heart.</h2>
-    </div>
-    <audio src="images/心跳.mp3" autoplay loop></audio>
+<!-- END HEAD -->
+
+<!-- BODY -->
+<body id="body" data-spy="scroll" data-target=".header">
+
+<!--========== 头部 ==========-->
+<header class="header navbar-fixed-top">
+	<audio src="img/happiness.mp3" autoplay loop></audio>
+	<!-- 导航 -->
+	<nav class="navbar" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="menu-container js_nav-item">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="toggle-icon"></span>
+				</button>
+
+				<!-- Logo -->
+				<div class="logo">
+					<a class="logo-wrap" href="#body">
+						<img class="logo-img logo-img-main" src="img/logo.png" alt="Asentus Logo">
+						<img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Asentus Logo">
+					</a>
+				</div>
+				<!-- End Logo -->
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse nav-collapse">
+				<div class="menu-container">
+					<ul class="nav navbar-nav navbar-nav-right">
+						<li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">主页</a></li>
+						<li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">关于我</a></li>
+						<li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">经历</a></li>
+						<li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">项目</a></li>
+						<li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">联系我吧</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- End Navbar Collapse -->
+		</div>
+	</nav>
+	<!-- Navbar -->
+</header>
+<!--========== 头部结束 ==========-->
+
+<!--========== 自我介绍 ==========-->
+<div class="promo-block parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/01.jpg">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="promo-block-divider">
+					<h1 class="promo-block-title" style="font-family: simsun;"><br><br>方紫阳</h1>
+					<p class="promo-block-text">Web Designer &amp; Developer</p>
+				</div>
+				<ul class="list-inline">
+					<li><a href="https://github.com/PXRace" class="social-icons" target="_blank" title="去GitHub看看"><i class="icon-social-github"></i></a></li>
+					<li><a href="#" class="social-icons"><i class="icon-social-twitter"></i></a></li>
+					<li><a href="#" class="social-icons"><i class="icon-social-dribbble"></i></a></li>
+					<li><a href="#" class="social-icons"><i class="icon-social-behance"></i></a></li>
+					<li><a href="#" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--// end row -->
+	</div>
+</div>
+
+<!-- 关于我 -->
+<div id="about">
+	<div class="container content-lg">
+		<div class="row">
+			<div class="col-sm-3 sm-margin-b-30">
+				<div class="text-right sm-text-left">
+					<h2 class="margin-b-0">关于我</h2>
+					<p>What I am all about.</p>
+				</div>
+			</div>
+			<div class="col-sm-8 col-sm-offset-1">
+				<div class="margin-b-60">
+					<p>你好，方紫阳，这是我的名字。95后。来自毛尖之乡，出生在那，学习在那。现在的我已从那出发，来到外面的世界。外面的世界里，我的第一个坐标——上海。</p>
+					<p>前端，是我所喜爱的，也是我今后职业发展的方向。前端即兴趣，兴趣即未来。本人在公司主要负责整个页面的前端开发，配合后台人员实现产品前端界面效果与功能。写过响应式页面，移动端页面，pc端页面。对大前端的技术掌握也是必不可少的。</p>
+				</div>
+
+				<!-- Progress Box -->
+				<div class="progress-box">
+					<h5>CSS <span class="color-heading pull-right">87%</span></h5>
+					<div class="progress">
+						<div class="progress-bar bg-color-base" role="progressbar" data-width="87"></div>
+					</div>
+				</div>
+				<div class="progress-box">
+					<h5>HTML <span class="color-heading pull-right">96%</span></h5>
+					<div class="progress">
+						<div class="progress-bar bg-color-base" role="progressbar" data-width="96"></div>
+					</div>
+				</div>
+				<div class="progress-box">
+					<h5>JavaSript <span class="color-heading pull-right">62%</span></h5>
+					<div class="progress">
+						<div class="progress-bar bg-color-base" role="progressbar" data-width="62"></div>
+					</div>
+				</div>
+				<div class="progress-box">
+					<h5>JQuery <span class="color-heading pull-right">67%</span></h5>
+					<div class="progress">
+						<div class="progress-bar bg-color-base" role="progressbar" data-width="67"></div>
+					</div>
+				</div>
+				<div class="progress-box">
+					<h5>Vue <span class="color-heading pull-right">43%</span></h5>
+					<div class="progress">
+						<div class="progress-bar bg-color-base" role="progressbar" data-width="43"></div>
+					</div>
+				</div>
+				<div class="progress-box">
+					<h5>Photoshop <span class="color-heading pull-right">47%</span></h5>
+					<div class="progress">
+						<div class="progress-bar bg-color-base" role="progressbar" data-width="47"></div>
+					</div>
+				</div>
+				<!-- End Progress Box -->
+			</div>
+		</div>
+		<!--// end row -->
+	</div>
+</div>
+<!-- 关于结束 -->
+
+<!-- 经历 -->
+<div id="experience">
+	<div class="bg-color-sky-light" data-auto-height="true">
+		<div class="container content-lg">
+			<div class="row">
+				<div class="col-sm-3 sm-margin-b-30">
+					<div class="text-right sm-text-left">
+						<h2 class="margin-b-0">经历</h2>
+						<p>Batman would be jealous.</p>
+					</div>
+				</div>
+				<div class="col-sm-8 col-sm-offset-1">
+					<div class="row row-space-2 margin-b-4">
+						<div class="col-md-4 md-margin-b-4">
+							<div class="service" data-height="height">
+								<div class="service-element">
+									<i class="service-icon icon-chemistry"></i>
+								</div>
+								<div class="service-info">
+									<h3>南阳理工学院</h3>
+									<p class="margin-b-5">2016.09~2018.06<br>这是母校，难忘充实的日子在这度过。带着所学知识，带着证书学位，带着未来，在这年的夏天离开。</p>
+								</div>
+								<a href="JavaScript:void();" class="content-wrapper-link"></a>    
+							</div>
+						</div>
+						<div class="col-md-4 md-margin-b-4">
+							<div class="service bg-color-base wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
+								<div class="service-element">
+									<i class="service-icon color-white icon-screen-tablet"></i>
+								</div>
+								<div class="service-info">
+									<h3 class="color-white">郑州森海网络科技公司</h3>
+									<p class="color-white margin-b-5">2017.06~2017.07<br>负责PC端移动端页面制作。PSD切图后构建页面框架 利用HTML、JS、CSS3书写前端功能，让页面更充实丰富。 </p>
+								</div>
+								<a href="#" class="content-wrapper-link"></a>    
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="service" data-height="height">
+								<div class="service-element">
+									<i class="service-icon icon-badge"></i>
+								</div>
+								<div class="service-info">
+									<h3>河南明德泰科电子科技有限公司</h3>
+									<p class="margin-b-5">2017.08~2018.06<br>负责符合W3C标准、多浏览器兼容、语义化的Web前端网页产品功能的开发，调试和维护。根据UI图纸，使用原生js和jQuery实现页面特效和动态效果,例如图片的轮播；使用ajax请求与后台交互调试接口</p>
+								</div>
+								<a href="#" class="content-wrapper-link"></a>    
+							</div>
+						</div>
+					</div>
+					<!--// end row -->
+				</div>
+			</div>
+			<!--// end row -->
+		</div>
+	</div>
+</div>
+<!-- 经历结束 -->
+<!-- 工作项目 -->
+<div id="work">
+	<div class="container content-lg">
+		<div class="row">
+			<div class="col-sm-3 sm-margin-b-30">
+				<div class="text-right sm-text-left">
+					<h2 class="margin-b-0">项目</h2>
+					<p>I build the real value.</p>
+				</div>
+			</div>
+			<div class="col-sm-8 col-sm-offset-1">
+				<!-- Masonry Grid -->
+				<div class="masonry-grid row row-space-2">
+					<div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
+					<div class="masonry-grid-item col-xs-12 col-sm-6 col-md-8 margin-b-4">
+						<!-- Work -->
+						<div class="work work-popup-trigger">
+							<div class="work-overlay">
+								<img class="full-width img-responsive" src="img/800x400/项目1.jpg" alt="Portfolio Image">
+							</div>
+							<div class="work-popup-overlay">
+								<div class="work-popup-content">
+									<a href="javascript:void(0);" class="work-popup-close">Hide</a>
+									<div class="margin-b-30">
+										<h3 class="margin-b-5">电气工程虚拟仿真实验中心</h3>
+										<span>应用型企业官网</span>
+									</div>
+									<div class="row">
+										<div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+											<div class="margin-t-10 sm-margin-t-0">
+												<p>独立的门户网站，实现中心概况、实时新闻、中心动态、全部课程介绍等信息的发布；另一方面建设有虚拟仿真实验教学平台，能实现网络化实验实训课程开设、学生选课、远程答疑、作业提交批改等教学功能。</p>
+												<p>本人在项目中主要负责跟UI讨论版面布局设计。根据PSD图，构建页面的结构样式，运用原生js、jQuery实现轮播特效等，实现数据交互动态页面</p>
+												<!-- <ul class="list-inline work-popup-tag">
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Design,</a></li>
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Coding,</a></li>
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Portfolio</a></li>
+												</ul> -->
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="margin-t-10 sm-margin-t-0">
+												<p class="margin-b-5"><strong>项目组长:</strong> 冯继强</p>
+												<p class="margin-b-5"><strong>设计:</strong> 方紫阳</p>
+												<p class="margin-b-5"><strong>开发:</strong> 方紫阳</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Work -->
+					</div>
+					<div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 margin-b-4">
+						<!-- Work -->
+						<div class="work work-popup-trigger">
+							<div class="work-overlay">
+								<img class="full-width img-responsive" src="img/397x400/01.jpg" alt="Portfolio Image">
+							</div>
+							<div class="work-popup-overlay">
+								<div class="work-popup-content">
+									<a href="javascript:void(0);" class="work-popup-close">Hide</a>
+									<div class="margin-b-30">
+										<h3 class="margin-b-5">项目二</h3>
+										<span>展示型</span>
+									</div>
+									<div class="row">
+										<div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+											<div class="margin-t-10 sm-margin-t-0">
+												<p>独立的门户网站，实现中心概况、实时新闻、中心动态、全部课程介绍等信息的发布；另一方面建设有虚拟仿真实验教学平台，能实现网络化实验实训课程开设、学生选课、远程答疑、作业提交批改等教学功能。</p>
+												<p>本人在项目中主要负责跟UI讨论版面布局设计。根据PSD图，构建页面的结构样式，运用原生js、jQuery实现轮播特效等，实现数据交互动态页面</p>
+												<!-- <ul class="list-inline work-popup-tag">
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Design,</a></li>
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Coding,</a></li>
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Portfolio</a></li>
+												</ul> -->
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="margin-t-10 sm-margin-t-0">
+												<p class="margin-b-5"><strong>Project Leader:</strong> 我</p>
+												<p class="margin-b-5"><strong>Designer:</strong> 我</p>
+												<p class="margin-b-5"><strong>Developer:</strong> 我</p>
+												<!-- <p class="margin-b-5"><strong>Customer:</strong> Keenthemes</p> -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Work -->
+					</div>
+					<div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 md-margin-b-4">
+						<!-- Work -->
+						<div class="work work-popup-trigger">
+							<div class="work-overlay">
+								<img class="full-width img-responsive" src="img/397x300/01.jpg" alt="Portfolio Image">
+							</div>
+							<div class="work-popup-overlay">
+								<div class="work-popup-content">
+									<a href="javascript:void(0);" class="work-popup-close">Hide</a>
+									<div class="margin-b-30">
+										<h3 class="margin-b-5">项目三</h3>
+										<span>企业官网</span>
+									</div>
+									<div class="row">
+										<div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+											<div class="margin-t-10 sm-margin-t-0">
+												<p>独立的门户网站，实现中心概况、实时新闻、中心动态、全部课程介绍等信息的发布；另一方面建设有虚拟仿真实验教学平台，能实现网络化实验实训课程开设、学生选课、远程答疑、作业提交批改等教学功能。</p>
+												<p>本人在项目中主要负责跟UI讨论版面布局设计。根据PSD图，构建页面的结构样式，运用原生js、jQuery实现轮播特效等，实现数据交互动态页面</p>
+												<!-- <ul class="list-inline work-popup-tag">
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Design,</a></li>
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Coding,</a></li>
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Portfolio</a></li>
+												</ul> -->
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="margin-t-10 sm-margin-t-0">
+												<p class="margin-b-5"><strong>Project Leader:</strong> 我</p>
+												<p class="margin-b-5"><strong>Designer:</strong> 我</p>
+												<p class="margin-b-5"><strong>Developer:</strong> 我</p>
+												<!-- <p class="margin-b-5"><strong>Customer:</strong> Keenthemes</p> -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Work -->
+					</div>
+					<div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 md-margin-b-4">
+						<!-- Work -->
+						<div class="work work-popup-trigger">
+							<div class="work-overlay">
+								<img class="full-width img-responsive" src="img/397x300/02.jpg" alt="Portfolio Image">
+							</div>
+							<div class="work-popup-overlay">
+								<div class="work-popup-content">
+									<a href="javascript:void(0);" class="work-popup-close">Hide</a>
+									<div class="margin-b-30">
+										<h3 class="margin-b-5">项目四</h3>
+										<span>展示型企业官网</span>
+									</div>
+									<div class="row">
+										<div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+											<div class="margin-t-10 sm-margin-t-0">
+												<p>独立的门户网站，实现中心概况、实时新闻、中心动态、全部课程介绍等信息的发布；另一方面建设有虚拟仿真实验教学平台，能实现网络化实验实训课程开设、学生选课、远程答疑、作业提交批改等教学功能。</p>
+												<p>本人在项目中主要负责跟UI讨论版面布局设计。根据PSD图，构建页面的结构样式，运用原生js、jQuery实现轮播特效等，实现数据交互动态页面</p>
+												<!-- <ul class="list-inline work-popup-tag">
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Design,</a></li>
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Coding,</a></li>
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Portfolio</a></li>
+												</ul> -->
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="margin-t-10 sm-margin-t-0">
+												<p class="margin-b-5"><strong>Project Leader:</strong> 我</p>
+												<p class="margin-b-5"><strong>Designer:</strong> 我</p>
+												<p class="margin-b-5"><strong>Developer:</strong> 我</p>
+												<!-- <p class="margin-b-5"><strong>Customer:</strong> Keenthemes</p> -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Work -->
+					</div>
+					<div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+						<!-- Work -->
+						<div class="work work-popup-trigger">
+							<div class="work-overlay">
+								<img class="full-width img-responsive" src="img/397x300/03.jpg" alt="Portfolio Image">
+							</div>
+							<div class="work-popup-overlay">
+								<div class="work-popup-content">
+									<a href="javascript:void(0);" class="work-popup-close">Hide</a>
+									<div class="margin-b-30">
+										<h3 class="margin-b-5">项目五</h3>
+										<span>展示型企业官网</span>
+									</div>
+									<div class="row">
+										<div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+											<div class="margin-t-10 sm-margin-t-0">
+												<p>独立的门户网站，实现中心概况、实时新闻、中心动态、全部课程介绍等信息的发布；另一方面建设有虚拟仿真实验教学平台，能实现网络化实验实训课程开设、学生选课、远程答疑、作业提交批改等教学功能。</p>
+												<p>本人在项目中主要负责跟UI讨论版面布局设计。根据PSD图，构建页面的结构样式，运用原生js、jQuery实现轮播特效等，实现数据交互动态页面</p>
+												<!-- <ul class="list-inline work-popup-tag">
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Design,</a></li>
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Coding,</a></li>
+													<li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Portfolio</a></li>
+												</ul> -->
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="margin-t-10 sm-margin-t-0">
+												<p class="margin-b-5"><strong>Project Leader:</strong> me</p>
+												<p class="margin-b-5"><strong>Designer:</strong> me</p>
+												<p class="margin-b-5"><strong>Developer:</strong> me</p>
+												<!-- <p class="margin-b-5"><strong>Customer:</strong> Keenthemes</p> -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Work -->
+					</div>
+				</div>
+				<!-- End Masonry Grid -->
+			</div>
+		</div>
+		<!--// end row -->
+	</div>
+</div>
+<!-- End Work -->
+	
+<!-- Contact -->
+<div id="contact">
+	<div class="bg-color-sky-light">
+		<div class="container content-lg">
+			<div class="row">
+				<div class="col-sm-3 sm-margin-b-30">
+					<div class="text-right sm-text-left">
+						<h2 class="margin-b-0">联系我</h2>
+						<p>Hire me.</p>
+					</div>
+				</div>
+				<div class="col-sm-8 col-sm-offset-1">
+					<div class="row">
+						<div class="col-md-3 col-xs-6 md-margin-b-30">
+							<h5>地址</h5>
+							<a href="https://www.amap.com/place/BS10076301" target="_blank">上海 宝山</a>
+						</div>
+						<div class="col-md-3 col-xs-6 md-margin-b-30">
+							<h5>手机</h5>
+							<a href="#">130 2775 2635</a>
+						</div>
+						<div class="col-md-3 col-xs-6">
+							<h5>Email</h5>
+							<a href="https://mail.126.com/#return" target="_blank">YY392223@126.com</a>
+						</div>
+						<div class="col-md-3 col-xs-6">
+							<h5>Github</h5>
+							<a href="https://github.com/PXRace" target="_blank">github.com/PXRace</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--// end row -->
+		</div>
+	</div>
+</div>
+<!-- End Contact -->
+<!--========== END PAGE LAYOUT ==========-->
+
+<!--========== FOOTER ==========-->
+<footer class="footer">
+	<div class="content container">
+		<div class="row">
+			<div class="col-xs-6">
+				<img class="footer-logo" src="img/logo-dark.png" alt="Aircv Logo">
+			</div>
+			<div class="col-xs-6 text-right sm-text-left" >
+				<p class="margin-b-0">Copyright &copy; 2018.Company PXRace All rights reserved.</p>
+			</div>
+		</div>
+		<!--// end row -->
+	</div>
+</footer>
+<!--========== END FOOTER ==========-->
+
+<!-- Back To Top -->
+<a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+<!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- CORE PLUGINS -->
+<script src="vendor/jquery.min.js" type="text/javascript"></script>
+<script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- PAGE LEVEL PLUGINS -->
+<script src="vendor/jquery.easing.js" type="text/javascript"></script>
+<script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+<script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+<script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+<script src="vendor/jquery.parallax.min.js" type="text/javascript"></script>
+<script src="vendor/jquery.appear.js" type="text/javascript"></script>
+<script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+<script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+<!-- PAGE LEVEL SCRIPTS -->
+<script src="js/layout.min.js" type="text/javascript"></script>
+<script src="js/components/progress-bar.min.js" type="text/javascript"></script>
+<script src="js/components/masonry.min.js" type="text/javascript"></script>
+<script src="js/components/wow.min.js" type="text/javascript"></script>
+
 </body>
+<!-- END BODY -->
 </html>
